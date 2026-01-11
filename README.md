@@ -53,12 +53,16 @@ The system is organized in a publish/subscribe architecture, using an MQTT broke
 ## Project structure
 
 SmartDoorLock/
-├── src/main.cpp # source code
-├── platformio.ini # PlatformIO configuraion
-├── README.md
-├── include/
-├── lib/
-└── test/
+├── src/
+│   └── main.cpp        # ESP32 application source code
+├── include/            # Project headers (optional)
+├── lib/                # External libraries (optional)
+├── test/               # Unit / integration tests
+├── docs/               # Project documentation (report, diagrams)
+│   └── Smart_Door_Lock_System.pdf
+├── platformio.ini      # PlatformIO configuration
+├── README.md           # Project description
+└── .gitignore
 
 ---
 
