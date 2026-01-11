@@ -71,6 +71,12 @@ SmartDoorLock/
 
 ---
 
+## Documentation
+The full project documentation (report and diagrams) is available in the `docs/` folder.
+
+---
+
 ## Author
 **Bănățean Alexandru-Ioan**
+
 Politehnica University of Timișoara
