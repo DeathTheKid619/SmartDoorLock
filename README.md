@@ -1,14 +1,76 @@
-# SmartDoorLock
-The project proposes the implementation of a smart door locking system, remotely controlled and integrated into an IoT architecture based on the MQTT protocol. The system allows:
+# Smart Door Lock System (ESP32 + MQTT)
 
-• Control of the closing and opening of an electric lock
+## Description
+This project implements a smart door lock system, based on an ESP32 microcontroller and the MQTT protocol. The system allows remote control of a locking mechanism, monitoring the door status and publishing events in an IoT architecture.
 
-• Local authentication via keyboard, RFID or PIN code
+---
 
-• Monitoring the door status (closed/open)
+## System architecture
+The system is organized in a publish/subscribe architecture, using an MQTT broker:
 
-• Real-time notifications to the user and/or application
+- **Embedded MQTT Client (ESP32)**
+- controls the locking mechanism
+- reads the door status
+- publishes status and events
+- receives control commands
 
-• Archiving events in a database.
+- **MQTT Broker**
+- mediates communication between clients
 
-This type of system is useful in residential buildings, offices, warehouses or industrial spaces where access needs to be controlled and monitored.
+- **Receiving clients (application, dashboard, PC)**
+- send commands
+- receive notifications
+
+---
+
+## MQTT Topics used
+
+| Topic | Direction | Description |
+|----|--------|-----|
+| `home/door1/cmd` | Subscribe | Lock/unlock commands |
+| `home/door1/status` | Publish | Door status (open / closed) |
+| `home/door1/event` | Publish | System events |
+
+---
+
+## Implemented functionalities
+- WiFi network connection
+- MQTT broker connection
+- Locking mechanism control (lock / unlock)
+- Door status monitoring via sensor
+- MQTT event publishing
+- Extensible architecture for future functionalities
+
+---
+
+## Hardware used
+- ESP32 Dev Module
+- Actuator (relay / electromagnet / servo)
+- Door position sensor (reed switch)
+
+---
+
+## Project structure
+
+SmartDoorLock/
+├── src/main.cpp # source code
+├── platformio.ini # PlatformIO configuraion
+├── README.md
+├── include/
+├── lib/
+└── test/
+
+---
+
+## Future Extensions
+- User Authentication (RFID / Keypad)
+- JSON Messages for Events
+- MQTT Authentication and Encryption
+- Database Integration
+- Mobile Application
+
+---
+
+## Author
+**Bănățean Alexandru-Ioan**
+Politehnica University of Timișoara
