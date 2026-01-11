@@ -52,6 +52,9 @@ The system is organized in a publish/subscribe architecture, using an MQTT broke
 
 ## Project structure
 
+## Project structure
+
+```text
 SmartDoorLock/
 ├── src/
 │   └── main.cpp        # ESP32 application source code
