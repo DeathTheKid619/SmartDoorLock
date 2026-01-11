@@ -52,8 +52,6 @@ The system is organized in a publish/subscribe architecture, using an MQTT broke
 
 ## Project structure
 
-## Project structure
-
 ```text
 SmartDoorLock/
 ├── src/
@@ -66,6 +64,7 @@ SmartDoorLock/
 ├── platformio.ini      # PlatformIO configuration
 ├── README.md           # Project description
 └── .gitignore
+```
 
 ---
 
